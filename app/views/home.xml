@@ -1,0 +1,20 @@
+<Alloy>
+	<Window class="container"  navBarHidden="true">
+		<!--<Label id="label" onClick="doClick">Hello, World</Label>-->
+		<!--<Widget id="buttongrid" src="com.appcelerator.buttongrid"/>-->
+		<View layout="horizontal" horizontalWrap="true">
+			<View class="buttonWrapper">
+				<Button backgroundColor="#669900" backgroundSelectedColor="#e2f0b6" class="homeButton" onClick="showAccounts">Accounts</Button>
+			</View>
+			<View class="buttonWrapper">
+				<Button backgroundColor="#cc0000" backgroundSelectedColor="#ffcaca" class="homeButton" >Contacts</Button>
+			</View>
+				<View class="buttonWrapper">
+			<Button backgroundColor="#ff8a00" backgroundSelectedColor="#ffecc0" class="homeButton" >Work Orders</Button>
+				</View>
+			<View class="buttonWrapper">
+				<Button backgroundColor="#0099cc" backgroundSelectedColor="#c5eaf8" class="homeButton" >Check-In</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>

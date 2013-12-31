@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container" backgroundColor="white">
+		<Require id="loading" type="widget" src="com.appcelerator.loading"/>
+	</Window>
+</Alloy>

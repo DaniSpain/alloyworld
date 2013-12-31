@@ -1,0 +1,15 @@
+"#header" : {
+	top: Alloy.Globals.top,
+	height: "50dp",
+	width: Ti.UI.FILL,
+	backgroundColor: "#ff8a00",
+}
+
+"#headerTitle" : {
+	left: "10dp",
+	color: "#fff",
+	font: {
+		fontSize: '20dp',
+	  	fontWeight: 'bold'
+	}
+}

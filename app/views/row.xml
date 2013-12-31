@@ -1,0 +1,7 @@
+<Alloy>
+	<TableViewRow id="row" class="listItem">
+	    <!--<ImageView id="check" onClick="toggleStatus"/>-->
+	    <Label id="accountName" text="{Name}"/>
+	    <!--<ImageView id="remove" onClick="deleteTask"/>-->
+	  </TableViewRow>
+</Alloy>

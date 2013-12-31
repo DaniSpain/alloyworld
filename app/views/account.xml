@@ -1,0 +1,18 @@
+<Alloy>
+    <Collection src="account" />
+    <Window class="container" title="Accounts" navBarHidden="true">
+    	
+    	<View id="header">
+	      <Label id="headerTitle">My Accounts</Label>
+	      <View id="addView">
+	        <ImageView id="addImage"/>
+	      </View>
+	    </View>
+	    
+        <TableView id="tblView" dataCollection="account">
+            <!-- Also can use Require -->
+            <!--<TableViewRow title="{Name}" class="listItem" /> -->
+            <Require src="row"/>
+        </TableView>
+    </Window>
+</Alloy>

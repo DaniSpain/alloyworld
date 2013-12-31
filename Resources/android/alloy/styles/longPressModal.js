@@ -1,0 +1,1 @@
+module.exports = [{"isClass":true,"priority":10000.0013,"key":"container","style":{}},{"isId":true,"priority":100000.0001,"key":"header","style":{top:Alloy.Globals.top,height:"50dp",width:Ti.UI.FILL,backgroundColor:"#ff8a00",}},{"isId":true,"priority":100000.0002,"key":"headerTitle","style":{left:"10dp",color:"#fff",font:{fontSize:"20dp",fontWeight:"bold",},}}];

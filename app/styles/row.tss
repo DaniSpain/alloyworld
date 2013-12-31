@@ -1,0 +1,12 @@
+
+".listItem" : {
+	height: '100dp',
+}
+
+"#accountName" : {
+	font: {
+	  	fontSize: '18dp',
+	  	fontWeight: 'bold'
+	},
+	left: "10dp"
+}

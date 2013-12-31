@@ -1,0 +1,7 @@
+<Alloy>
+	<Window backgroundColor="#ffffff" modal="true">
+		<View id="header">
+			<Label id="headerTitle"></Label>
+		</View>
+	</Window>
+</Alloy>

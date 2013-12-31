@@ -1,0 +1,14 @@
+"Window" : {
+	backgroundColor: "#000000"
+}
+
+".homeButton" : {
+	height: "90%",
+	width: "90%",
+	color: "#ffffff"
+}
+
+".buttonWrapper" : {
+	height: "50%",
+	width: "50%"
+}
