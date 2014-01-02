@@ -1,6 +1,7 @@
 
 ".listItem" : {
 	height: '100dp',
+	color: Alloy.Globals.rowTextColor
 }
 
 "#accountName" : {

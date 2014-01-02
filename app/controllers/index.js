@@ -1,6 +1,7 @@
 //$.index.open();
 
 // Show the loading icon.
+/*
 $.loading.setOpacity(1.0);
 
 Alloy.Globals.force.authorize({
@@ -26,3 +27,4 @@ Alloy.Globals.force.authorize({
 		alert('cancel');
 	}
 });	
+*/

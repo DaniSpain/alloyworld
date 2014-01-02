@@ -1,9 +1,9 @@
-#appname: alloyworld
-#appid: com.ds.alloyworld
-#type: mobile
-#guid: ee82c3a6-5715-4565-8789-51d40e424aab
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:alloyworld
+#appid:com.ds.alloyworld
+#type:ipad
+#guid:ee82c3a6-5715-4565-8789-51d40e424aab
+#version:1.0
+#publisher:Daniele
+#url:http://appycloud.appspot.com
+#image:appicon.png
+#desc:not specified

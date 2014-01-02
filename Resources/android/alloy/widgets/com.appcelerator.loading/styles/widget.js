@@ -19,7 +19,7 @@ module.exports = [ {
     priority: 100000.0002,
     key: "headerTitle",
     style: {
-        left: "10dp",
+        left: "60dp",
         color: "#fff",
         font: {
             fontSize: "20dp",

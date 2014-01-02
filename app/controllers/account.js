@@ -29,6 +29,10 @@ function filterFunction(collection) {
 var accounts = Alloy.Collections.account;
 accounts.fetch();
  
+function closeWindow() {
+	$.account.close();	
+}
+
 // Free model-view data binding resources when this view-controller closes
 $.account.addEventListener('close', function() {
     $.destroy();

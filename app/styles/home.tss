@@ -1,5 +1,6 @@
 "Window" : {
-	backgroundColor: "#000000"
+	backgroundColor: "#000000",
+	top: Alloy.Globals.top
 }
 
 ".homeButton" : {

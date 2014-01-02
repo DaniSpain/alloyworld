@@ -1,4 +1,5 @@
 <Alloy>
+	<!--<NavigationWindow id="win1" platform="ios">-->
 	<Window class="container"  navBarHidden="true">
 		<!--<Label id="label" onClick="doClick">Hello, World</Label>-->
 		<!--<Widget id="buttongrid" src="com.appcelerator.buttongrid"/>-->
@@ -17,4 +18,5 @@
 			</View>
 		</View>
 	</Window>
+	<!--</NavigationWindow>-->
 </Alloy>

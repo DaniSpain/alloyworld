@@ -6,7 +6,7 @@
 }
 
 "#headerTitle" : {
-	left: "10dp",
+	left: "60dp",
 	color: "#fff",
 	font: {
 		fontSize: '20dp',
