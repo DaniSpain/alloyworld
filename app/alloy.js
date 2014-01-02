@@ -14,8 +14,11 @@ Alloy.Globals.accountSync = require('account_sync');
 Alloy.Globals.IS_ANDROID = (Titanium.Platform.osname == "android") ? true : false;
 Alloy.Globals.IS_IOS = ((Titanium.Platform.osname == "iphone")||(Titanium.Platform.osname == "ipad")) ? true : false;
 
+/*
 Alloy.Globals.rowTextColor = "#ffffff";
 if (OS_IOS) Alloy.Globals.rowTextColor = "#000000";
+*/
+Alloy.Globals.rowTextColor = "#000000";
 
 if (OS_IOS || OS_ANDROID) {
 	//Alloy.Collections.todo = Alloy.createCollection('todo');

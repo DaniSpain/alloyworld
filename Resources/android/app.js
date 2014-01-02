@@ -8,7 +8,7 @@ Alloy.Globals.IS_ANDROID = true;
 
 Alloy.Globals.IS_IOS = false;
 
-Alloy.Globals.rowTextColor = "#ffffff";
+Alloy.Globals.rowTextColor = "#000000";
 
 Alloy.Globals.top = 0;
 

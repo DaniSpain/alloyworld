@@ -3,7 +3,7 @@
 	<Window class="container"  navBarHidden="true">
 		<!--<Label id="label" onClick="doClick">Hello, World</Label>-->
 		<!--<Widget id="buttongrid" src="com.appcelerator.buttongrid"/>-->
-		<View layout="horizontal" horizontalWrap="true">
+		<View id="wrapper" layout="horizontal" horizontalWrap="true">
 			<View class="buttonWrapper">
 				<Button backgroundColor="#669900" backgroundSelectedColor="#e2f0b6" class="homeButton" onClick="showAccounts">Accounts</Button>
 			</View>

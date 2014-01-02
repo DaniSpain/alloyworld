@@ -1,6 +1,5 @@
-"Window" : {
-	backgroundColor: "#000000",
-	top: Alloy.Globals.top
+"#wrapper" : {
+	top: Alloy.Globals.top,
 }
 
 ".homeButton" : {
@@ -11,5 +10,6 @@
 
 ".buttonWrapper" : {
 	height: "50%",
-	width: "50%"
+	width: "50%",
+	backgroundColor: "#000000",
 }

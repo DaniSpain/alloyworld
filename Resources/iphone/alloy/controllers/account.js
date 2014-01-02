@@ -34,6 +34,7 @@ function Controller() {
     var __defers = {};
     Alloy.Collections.instance("account");
     $.__views.account = Ti.UI.createWindow({
+        backgroundColor: "#ffffff",
         title: "Accounts",
         navBarHidden: "true",
         id: "account"

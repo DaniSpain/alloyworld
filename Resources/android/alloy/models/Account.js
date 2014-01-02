@@ -1,7 +1,8 @@
 exports.definition = {
     config: {
         columns: {
-            Id: "TEXT",
+            LOCALId: "INT PRIMARY KEY AUTOINCREMENT",
+            SFDCId: "TEXT",
             Name: "TEXT",
             BillingAddress: "TEXT",
             LastModifiedDate: "TEXT"

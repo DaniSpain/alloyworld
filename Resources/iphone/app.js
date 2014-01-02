@@ -8,8 +8,6 @@ Alloy.Globals.IS_ANDROID = "android" == Titanium.Platform.osname ? true : false;
 
 Alloy.Globals.IS_IOS = "iphone" == Titanium.Platform.osname || "ipad" == Titanium.Platform.osname ? true : false;
 
-Alloy.Globals.rowTextColor = "#ffffff";
-
 Alloy.Globals.rowTextColor = "#000000";
 
 Alloy.Globals.top = 0;

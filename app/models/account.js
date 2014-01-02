@@ -1,15 +1,17 @@
 exports.definition = {
 	config: {
 		columns: {
-			"Id": "TEXT",
+			"LOCALId": "INTEGER PRIMARY KEY AUTOINCREMENT",
+			"SFDCId": "TEXT",
 		    "Name": "TEXT",
 		    "BillingAddress": "TEXT",
-		    "LastModifiedDate": "TEXT"
+		    "RemoteLastModifiedDate": "TEXT",
+		    "LocalLastModifiedDate": "TEXT",
 		},
 		adapter: {
 			type: "sql",
 			collection_name: "account",
-			idAttribute: "id"
+			idAttribute: "LOCALId"
 		}
 	},
 	extendModel: function(Model) {

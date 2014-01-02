@@ -1,0 +1,14 @@
+<Alloy>
+	<View class="container">
+		
+		<View id="header">
+    	  <View id="backView" onClick="closeWindow">
+	        <ImageView id="backImage"/>
+	      </View>
+	      <Label id="headerTitle">Create Account</Label>
+	    </View>
+	    
+	    
+	    
+	</View>
+</Alloy>

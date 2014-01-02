@@ -1,26 +1,5 @@
-
-".container" : {
-
-}
-
 "TableView" : {
 	top: Alloy.Globals.tableTop
-}
-
-"#backView" : {
-	top: 0,
-	bottom: 0,
-	left: 0,
-	width: "50dp"
-}
-
-"#backImage" : {
-	height: Ti.UI.FILL,
-	width: Ti.UI.FILL,
-	color: "#fff",
-	backgroundColor: "transparent",
-	image: "/images/ic_action_back.png",
-	//touchEnabled: false
 }
 
 "#addView" : {
