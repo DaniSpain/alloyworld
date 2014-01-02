@@ -5,7 +5,9 @@ function doClick(e) {
 function showAccounts(e) {
 	//alert("ciao");
 	var accountView = Alloy.createController('account').getView();
-	accountView.open();
+	accountView.open({
+		transition:Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+	});
 	//$.navBar.open(accountView, {animated : true});
 } 
 /*

@@ -1,7 +1,9 @@
 function Controller() {
     function showAccounts() {
         var accountView = Alloy.createController("account").getView();
-        accountView.open();
+        accountView.open({
+            transition: Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+        });
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "home";

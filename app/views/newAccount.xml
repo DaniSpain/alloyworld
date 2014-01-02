@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container">
+	<Window class="container"  navBarHidden="true">
 		
 		<View id="header">
     	  <View id="backView" onClick="closeWindow">
@@ -8,7 +8,18 @@
 	      <Label id="headerTitle">Create Account</Label>
 	    </View>
 	    
+	    <View id="wrapper" layout="horizontal" horizontalWrap="true">
+	    	<View class="column" id="col1">
+	    		<Label>Ciao</Label>
+	    		<TextField></TextField>
+	    	</View>
+	    	<View class="column" id="col2">
+	    		<Label>Ciao</Label>
+	    		<TextField></TextField>
+	    	</View>
+	    </View>
 	    
 	    
-	</View>
+	    
+	</Window>
 </Alloy>

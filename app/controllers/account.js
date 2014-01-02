@@ -29,8 +29,9 @@ function filterFunction(collection) {
 var accounts = Alloy.Collections.account;
 accounts.fetch();
  
-function closeWindow() {
-	$.account.close();	
+function newAccount() {
+	var addView = Alloy.createController('newAccount').getView();
+	addView.open();
 }
 
 // Free model-view data binding resources when this view-controller closes

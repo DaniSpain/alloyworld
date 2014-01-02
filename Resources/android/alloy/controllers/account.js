@@ -21,8 +21,9 @@ function Controller() {
     function closeWindow() {
         $.account.close();
     }
-    function closeWindow() {
-        $.account.close();
+    function newAccount() {
+        var addView = Alloy.createController("newAccount").getView();
+        addView.open();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "account";
@@ -37,6 +38,7 @@ function Controller() {
         backgroundColor: "#ffffff",
         title: "Accounts",
         navBarHidden: "true",
+        modal: "true",
         id: "account"
     });
     $.__views.account && $.addTopLevelView($.__views.account);
@@ -85,6 +87,7 @@ function Controller() {
         id: "addView"
     });
     $.__views.header.add($.__views.addView);
+    newAccount ? $.__views.addView.addEventListener("click", newAccount) : __defers["$.__views.addView!click!newAccount"] = true;
     $.__views.addImage = Ti.UI.createImageView({
         height: Ti.UI.FILL,
         width: Ti.UI.FILL,
@@ -116,6 +119,7 @@ function Controller() {
         alert(e.row);
     });
     __defers["$.__views.backView!click!closeWindow"] && $.__views.backView.addEventListener("click", closeWindow);
+    __defers["$.__views.addView!click!newAccount"] && $.__views.addView.addEventListener("click", newAccount);
     _.extend($, exports);
 }
 

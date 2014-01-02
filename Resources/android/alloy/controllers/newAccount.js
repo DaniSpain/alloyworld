@@ -1,4 +1,7 @@
 function Controller() {
+    function closeWindow() {
+        $.newAccount.close();
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "newAccount";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -7,7 +10,10 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.newAccount = Ti.UI.createView({
+    $.__views.newAccount = Ti.UI.createWindow({
+        backgroundColor: "#ffffff",
+        navBarHidden: "true",
+        modal: "true",
         id: "newAccount"
     });
     $.__views.newAccount && $.addTopLevelView($.__views.newAccount);
@@ -48,9 +54,45 @@ function Controller() {
         id: "headerTitle"
     });
     $.__views.header.add($.__views.headerTitle);
+    $.__views.wrapper = Ti.UI.createView({
+        top: Alloy.Globals.tableTop,
+        id: "wrapper",
+        layout: "horizontal",
+        horizontalWrap: "true"
+    });
+    $.__views.newAccount.add($.__views.wrapper);
+    $.__views.col1 = Ti.UI.createView({
+        width: "600dp",
+        id: "col1"
+    });
+    $.__views.wrapper.add($.__views.col1);
+    $.__views.__alloyId15 = Ti.UI.createLabel({
+        text: "Ciao",
+        id: "__alloyId15"
+    });
+    $.__views.col1.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createTextField({
+        id: "__alloyId16"
+    });
+    $.__views.col1.add($.__views.__alloyId16);
+    $.__views.col2 = Ti.UI.createView({
+        width: "600dp",
+        id: "col2"
+    });
+    $.__views.wrapper.add($.__views.col2);
+    $.__views.__alloyId17 = Ti.UI.createLabel({
+        text: "Ciao",
+        id: "__alloyId17"
+    });
+    $.__views.col2.add($.__views.__alloyId17);
+    $.__views.__alloyId18 = Ti.UI.createTextField({
+        id: "__alloyId18"
+    });
+    $.__views.col2.add($.__views.__alloyId18);
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    $.newAccount.open();
     __defers["$.__views.backView!click!closeWindow"] && $.__views.backView.addEventListener("click", closeWindow);
     _.extend($, exports);
 }

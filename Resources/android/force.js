@@ -30,9 +30,11 @@ exports.authorize = function(callbacks) {
         }
         var self = Ti.UI.createWindow({
             modal: true,
+            backgroundColor: "#ffffff",
             title: "Force.com Login"
         });
         var webView = Ti.UI.createWebView({
+            top: Alloy.Globals.top,
             height: Ti.UI.FILL,
             widht: Ti.UI.FILL,
             url: LOGIN_URL

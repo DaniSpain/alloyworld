@@ -7,7 +7,7 @@
 	        <ImageView id="backImage"/>
 	      </View>
 	      <Label id="headerTitle">My Accounts</Label>
-	      <View id="addView">
+	      <View id="addView" onClick="newAccount">
 	        <ImageView id="addImage"/>
 	      </View>
 	    </View>
