@@ -1,0 +1,22 @@
+<Alloy>
+	<Collection src="picklist"></Collection>
+	<Window navBarHidden="true" backgroundColor="transparent">
+		<View width="300dp" height="300dp" borderColor="gray" >
+			
+			<View id="header" top="0">
+		      <Label id="headerTitle" left="10dp">Industries</Label>
+		      <View id="closeView" onClick="closeWindow">
+		        <ImageView id="closeImage"/>
+		      </View>
+		    </View>
+		    
+		    <TableView id="tblView" dataCollection="picklist">
+            <!-- Also can use Require -->
+            <!--<TableViewRow title="{Value}" class="listItem" />-->
+            <TableViewRow id="row" class="listItem">
+				<Label id="picklistValue" text="{Value}"/>
+			</TableViewRow>
+        </TableView>
+		</View>
+	</Window>
+</Alloy>

@@ -1,5 +1,5 @@
 //Global Configuration
-var API_VERSION = 'v25.0'; //Currently hard-coded to Summer 2012 release
+var API_VERSION = 'v29.0'; //Currently hard-coded to Summer 2012 release
 var CONSUMER_KEY = Ti.App.Properties.getString('force.consumer.key');
 var CONSUMER_SECRET = Ti.App.Properties.getString('force.consumer.secret');
 var REDIRECT_URI = 'https://login.salesforce.com/services/oauth2/success';

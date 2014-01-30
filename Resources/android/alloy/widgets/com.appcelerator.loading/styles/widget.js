@@ -63,4 +63,25 @@ module.exports = [ {
         backgroundColor: "transparent",
         image: "/images/ic_action_back.png"
     }
+}, {
+    isId: true,
+    priority: 100000.0006,
+    key: "closeView",
+    style: {
+        top: 0,
+        bottom: 0,
+        right: 0,
+        width: "50dp"
+    }
+}, {
+    isId: true,
+    priority: 100000.0007,
+    key: "closeImage",
+    style: {
+        height: Ti.UI.FILL,
+        width: Ti.UI.FILL,
+        color: "#fff",
+        backgroundColor: "transparent",
+        image: "/images/ic_action_undo.png"
+    }
 } ];

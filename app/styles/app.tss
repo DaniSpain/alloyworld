@@ -33,3 +33,19 @@
 	image: "/images/ic_action_back.png",
 	//touchEnabled: false
 }
+
+"#closeView" : {
+	top: 0,
+	bottom: 0,
+	right: 0,
+	width: "50dp"
+}
+
+"#closeImage" : {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	color: "#fff",
+	backgroundColor: "transparent",
+	image: "/images/ic_action_undo.png",
+	//touchEnabled: false
+}

@@ -4,9 +4,9 @@ Alloy.Globals.force = require("force");
 
 Alloy.Globals.accountSync = require("account_sync");
 
-Alloy.Globals.IS_ANDROID = true;
+Alloy.Globals.picklistSync = require("picklist_sync");
 
-Alloy.Globals.IS_IOS = false;
+Alloy.Globals.picklistData = require("picklist_data");
 
 Alloy.Globals.rowTextColor = "#000000";
 
@@ -20,9 +20,7 @@ Alloy.Globals.force.authorize({
     success: function() {
         Titanium.API.info("Authenticated to salesforce");
         Alloy.Globals.accountSync.fetchAccounts();
-        Titanium.API.info("Opening Home...");
-        var homeView = Alloy.createController("home").getView();
-        homeView.open();
+        Alloy.Globals.picklistSync.fetchPicklists();
     },
     error: function() {
         alert("error");

@@ -1,0 +1,19 @@
+"Window" : {
+	backgroundColor: "transparent"
+}
+
+"#tblView" : {
+	top: "50dp",
+	backgroundColor: "#ffffff" //the header height
+}
+
+"Label" : {
+	color: "#000000",
+	font: {
+		fontSize: '18dp'
+	}
+}
+
+"#row" : {
+	height: "80dp"
+}

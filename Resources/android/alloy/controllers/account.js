@@ -38,7 +38,6 @@ function Controller() {
         backgroundColor: "#ffffff",
         title: "Accounts",
         navBarHidden: "true",
-        modal: "true",
         id: "account"
     });
     $.__views.account && $.addTopLevelView($.__views.account);

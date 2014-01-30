@@ -11,8 +11,10 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Globals.force = require('force');
 Alloy.Globals.accountSync = require('account_sync');
-Alloy.Globals.IS_ANDROID = (Titanium.Platform.osname == "android") ? true : false;
-Alloy.Globals.IS_IOS = ((Titanium.Platform.osname == "iphone")||(Titanium.Platform.osname == "ipad")) ? true : false;
+Alloy.Globals.picklistSync = require('picklist_sync');
+Alloy.Globals.picklistData = require('picklist_data');
+//Alloy.Globals.IS_ANDROID = (Titanium.Platform.osname == "android") ? true : false;
+//Alloy.Globals.IS_IOS = ((Titanium.Platform.osname == "iphone")||(Titanium.Platform.osname == "ipad")) ? true : false;
 
 /*
 Alloy.Globals.rowTextColor = "#ffffff";
@@ -36,6 +38,8 @@ if (OS_IOS || OS_ANDROID) {
 	}
 }
 
+
+
 Alloy.Globals.force.authorize({
 	success: function() {
 		//If we're logged in, create a very simple accounts UI
@@ -44,9 +48,10 @@ Alloy.Globals.force.authorize({
 		//w.open();
 		Titanium.API.info("Authenticated to salesforce");
 		Alloy.Globals.accountSync.fetchAccounts();
-		Titanium.API.info("Opening Home...");
-		var homeView = Alloy.createController('home').getView();
-		homeView.open();
+		Alloy.Globals.picklistSync.fetchPicklists();
+		//Titanium.API.info("Opening Home...");
+		//var homeView = Alloy.createController('home').getView();
+		//homeView.open();
 		
 	},
 	error: function() {

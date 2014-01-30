@@ -4,9 +4,35 @@
 }
 
 ".column" : {
-	width: "600dp"
+	width: "50%"
 }
 
 "#wrapper" : {
-	top: Alloy.Globals.tableTop
+	top: Alloy.Globals.tableTop,
+	height: Ti.UI.FILL
+}
+
+"Label" : {
+	font:{
+		fontSize: '18dp'
+	},
+	left: "0dp",
+	//left: "10dp"
+	//width: "100%"
+}
+
+".formTextField" : {
+	//height: "48",
+	//borderStyle: "Ti.UI.INPUT_BORDERSTYLE_BEZEL",
+	//keyboardToolbarColor:"#999",
+    //keyboardToolbarHeight:"40dp",
+	//width:"Ti.UI.FILL"
+	//width: "100%"
+}
+
+".buttonWrapper" : {
+	left: "20dp",
+	height: "100dp",
+	width: "280dp",
+	top: "10dp"
 }

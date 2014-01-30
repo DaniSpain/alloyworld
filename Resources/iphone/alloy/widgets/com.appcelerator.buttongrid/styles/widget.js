@@ -23,19 +23,6 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0002,
-    key: "scrollview",
-    style: {
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        contentWidth: Ti.UI.FILL,
-        contentHeight: "auto",
-        showVerticalScrollIndicator: true
-    }
-}, {
-    isId: true,
     priority: 100000.0003,
     key: "headerTitle",
     style: {
@@ -66,5 +53,39 @@ module.exports = [ {
         color: "#fff",
         backgroundColor: "transparent",
         image: "/images/ic_action_back.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0006,
+    key: "closeView",
+    style: {
+        top: 0,
+        bottom: 0,
+        right: 0,
+        width: "50dp"
+    }
+}, {
+    isId: true,
+    priority: 100000.0007,
+    key: "closeImage",
+    style: {
+        height: Ti.UI.FILL,
+        width: Ti.UI.FILL,
+        color: "#fff",
+        backgroundColor: "transparent",
+        image: "/images/ic_action_undo.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0009,
+    key: "scrollview",
+    style: {
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+        contentWidth: Ti.UI.FILL,
+        contentHeight: "auto",
+        showVerticalScrollIndicator: true
     }
 } ];

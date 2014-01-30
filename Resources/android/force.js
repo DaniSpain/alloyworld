@@ -6,7 +6,7 @@ function error(str) {
     Ti.API.error("[Force.com] " + str);
 }
 
-var API_VERSION = "v25.0";
+var API_VERSION = "v29.0";
 
 var CONSUMER_KEY = Ti.App.Properties.getString("force.consumer.key");
 

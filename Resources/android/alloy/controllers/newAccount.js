@@ -1,4 +1,8 @@
 function Controller() {
+    function openIndustryPicker() {
+        var pickerView = Alloy.createController("pickerModal").getView();
+        pickerView.open();
+    }
     function closeWindow() {
         $.newAccount.close();
     }
@@ -13,7 +17,6 @@ function Controller() {
     $.__views.newAccount = Ti.UI.createWindow({
         backgroundColor: "#ffffff",
         navBarHidden: "true",
-        modal: "true",
         id: "newAccount"
     });
     $.__views.newAccount && $.addTopLevelView($.__views.newAccount);
@@ -44,56 +47,180 @@ function Controller() {
     });
     $.__views.backView.add($.__views.backImage);
     $.__views.headerTitle = Ti.UI.createLabel({
-        left: "60dp",
-        color: "#fff",
         font: {
             fontSize: "20dp",
             fontWeight: "bold"
         },
+        left: "60dp",
+        color: "#fff",
         text: "Create Account",
         id: "headerTitle"
     });
     $.__views.header.add($.__views.headerTitle);
-    $.__views.wrapper = Ti.UI.createView({
+    $.__views.wrapper = Ti.UI.createScrollView({
         top: Alloy.Globals.tableTop,
+        height: Ti.UI.FILL,
         id: "wrapper",
+        layout: "vertical"
+    });
+    $.__views.newAccount.add($.__views.wrapper);
+    $.__views.grid = Ti.UI.createView({
+        id: "grid",
         layout: "horizontal",
         horizontalWrap: "true"
     });
-    $.__views.newAccount.add($.__views.wrapper);
-    $.__views.col1 = Ti.UI.createView({
-        width: "600dp",
-        id: "col1"
-    });
-    $.__views.wrapper.add($.__views.col1);
-    $.__views.__alloyId15 = Ti.UI.createLabel({
-        text: "Ciao",
+    $.__views.wrapper.add($.__views.grid);
+    $.__views.__alloyId15 = Ti.UI.createView({
+        left: "20dp",
+        height: "100dp",
+        width: "280dp",
+        top: "10dp",
+        layout: "vertical",
         id: "__alloyId15"
     });
-    $.__views.col1.add($.__views.__alloyId15);
-    $.__views.__alloyId16 = Ti.UI.createTextField({
+    $.__views.grid.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createLabel({
+        font: {
+            fontSize: "18dp"
+        },
+        left: "0dp",
+        text: "Account Name",
         id: "__alloyId16"
     });
-    $.__views.col1.add($.__views.__alloyId16);
-    $.__views.col2 = Ti.UI.createView({
-        width: "600dp",
-        id: "col2"
-    });
-    $.__views.wrapper.add($.__views.col2);
-    $.__views.__alloyId17 = Ti.UI.createLabel({
-        text: "Ciao",
+    $.__views.__alloyId15.add($.__views.__alloyId16);
+    $.__views.__alloyId17 = Ti.UI.createTextField({
+        font: {
+            fontSize: "18dp"
+        },
+        height: "48",
+        top: "10",
+        width: Ti.UI.FILL,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+        backgroundColor: "#ffffff",
+        size: "18",
+        hintText: "Insert Account Name",
         id: "__alloyId17"
     });
-    $.__views.col2.add($.__views.__alloyId17);
-    $.__views.__alloyId18 = Ti.UI.createTextField({
+    $.__views.__alloyId15.add($.__views.__alloyId17);
+    $.__views.__alloyId18 = Ti.UI.createView({
+        left: "20dp",
+        height: "100dp",
+        width: "280dp",
+        top: "10dp",
+        layout: "vertical",
         id: "__alloyId18"
     });
-    $.__views.col2.add($.__views.__alloyId18);
+    $.__views.grid.add($.__views.__alloyId18);
+    $.__views.__alloyId19 = Ti.UI.createLabel({
+        font: {
+            fontSize: "18dp"
+        },
+        left: "0dp",
+        text: "Billing Street",
+        id: "__alloyId19"
+    });
+    $.__views.__alloyId18.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Ti.UI.createTextField({
+        height: "48",
+        top: "10",
+        width: Ti.UI.FILL,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+        hintText: "Insert Billing Street",
+        id: "__alloyId20"
+    });
+    $.__views.__alloyId18.add($.__views.__alloyId20);
+    $.__views.__alloyId21 = Ti.UI.createView({
+        left: "20dp",
+        height: "100dp",
+        width: "280dp",
+        top: "10dp",
+        layout: "vertical",
+        id: "__alloyId21"
+    });
+    $.__views.grid.add($.__views.__alloyId21);
+    $.__views.__alloyId22 = Ti.UI.createLabel({
+        font: {
+            fontSize: "18dp"
+        },
+        left: "0dp",
+        text: "Billing Street",
+        id: "__alloyId22"
+    });
+    $.__views.__alloyId21.add($.__views.__alloyId22);
+    $.__views.__alloyId23 = Ti.UI.createTextField({
+        height: "48",
+        top: "10",
+        width: Ti.UI.FILL,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+        hintText: "Insert Billing Street",
+        id: "__alloyId23"
+    });
+    $.__views.__alloyId21.add($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createView({
+        left: "20dp",
+        height: "250",
+        width: "280dp",
+        top: "10dp",
+        layout: "vertical",
+        id: "__alloyId24"
+    });
+    $.__views.grid.add($.__views.__alloyId24);
+    $.__views.__alloyId25 = Ti.UI.createLabel({
+        font: {
+            fontSize: "18dp"
+        },
+        left: "0dp",
+        text: "Industry",
+        id: "__alloyId25"
+    });
+    $.__views.__alloyId24.add($.__views.__alloyId25);
+    $.__views.__alloyId26 = Ti.UI.createButton({
+        title: "-- Pick an Industry --",
+        id: "__alloyId26"
+    });
+    $.__views.__alloyId24.add($.__views.__alloyId26);
+    openIndustryPicker ? $.__views.__alloyId26.addEventListener("click", openIndustryPicker) : __defers["$.__views.__alloyId26!click!openIndustryPicker"] = true;
+    $.__views.__alloyId27 = Ti.UI.createView({
+        left: "20dp",
+        height: "100dp",
+        width: "280dp",
+        top: "10dp",
+        layout: "vertical",
+        id: "__alloyId27"
+    });
+    $.__views.grid.add($.__views.__alloyId27);
+    $.__views.__alloyId28 = Ti.UI.createLabel({
+        font: {
+            fontSize: "18dp"
+        },
+        left: "0dp",
+        text: "Billing Street",
+        id: "__alloyId28"
+    });
+    $.__views.__alloyId27.add($.__views.__alloyId28);
+    $.__views.__alloyId29 = Ti.UI.createTextField({
+        height: "48",
+        top: "10",
+        width: Ti.UI.FILL,
+        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+        hintText: "Insert Billing Street",
+        id: "__alloyId29"
+    });
+    $.__views.__alloyId27.add($.__views.__alloyId29);
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    var industryPick = Alloy.Globals.picklistData.getPicklistValues("Account", "Industry");
+    var data = [];
+    for (var i = 0; industryPick.length > i; i++) {
+        var model = industryPick.at(i);
+        data[i] = Ti.UI.createPickerRow({
+            title: model.get("Value")
+        });
+    }
     $.newAccount.open();
     __defers["$.__views.backView!click!closeWindow"] && $.__views.backView.addEventListener("click", closeWindow);
+    __defers["$.__views.__alloyId26!click!openIndustryPicker"] && $.__views.__alloyId26.addEventListener("click", openIndustryPicker);
     _.extend($, exports);
 }
 

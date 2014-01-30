@@ -21,6 +21,10 @@ exports.fetchAccounts = function() {
 		var rec = model.toJSON();
 		Titanium.API.info("SQLite Account: " + rec.Name);
 	});
+	
+	Titanium.API.info("Opening Home...");
+	var homeView = Alloy.createController('home').getView();
+	homeView.open();
 };
 
 /**
@@ -62,5 +66,4 @@ function localUpsert(rec) {
 		    account.destroy();
 		}
 	}
-	
 }

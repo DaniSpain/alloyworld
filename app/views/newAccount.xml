@@ -8,18 +8,70 @@
 	      <Label id="headerTitle">Create Account</Label>
 	    </View>
 	    
-	    <View id="wrapper" layout="horizontal" horizontalWrap="true">
-	    	<View class="column" id="col1">
-	    		<Label>Ciao</Label>
-	    		<TextField></TextField>
-	    	</View>
-	    	<View class="column" id="col2">
-	    		<Label>Ciao</Label>
-	    		<TextField></TextField>
-	    	</View>
-	    </View>
-	    
-	    
-	    
+	    <ScrollView id="wrapper" layout="vertical" >
+	    	<!--<View class="column" id="col1" layout="vertical">-->
+	    	<View id="grid" layout="horizontal" horizontalWrap="true" >
+	    		<View class="buttonWrapper" layout="vertical">
+	    			
+	    			<Label>Account Name</Label>
+		    		<TextField class="formTextField"
+		    			height="48"
+		    			top="10"
+		    			width="Ti.UI.FILL"
+						borderStyle= "Ti.UI.INPUT_BORDERSTYLE_ROUNDED" backgroundColor="#ffffff"
+				        hintText="Insert Account Name">
+				    </TextField>
+				 
+	    		</View>
+	    	
+	    		<View class="buttonWrapper" layout="vertical">
+	    			<Label>Billing Street</Label>
+	    			
+		    		<TextField
+		    			height="48"
+		    			top="10"
+		    			width="Ti.UI.FILL"
+						borderStyle= "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+				        hintText="Insert Billing Street">
+				    </TextField>
+				</View>
+				
+				<View class="buttonWrapper" layout="vertical">
+	    			<Label>Billing Street</Label>
+	    			
+		    		<TextField
+		    			height="48"
+		    			top="10"
+		    			width="Ti.UI.FILL"
+						borderStyle= "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+				        hintText="Insert Billing Street">
+				    </TextField>
+				</View>
+				
+				<View class="buttonWrapper" height="250"layout="vertical">
+	    			<Label>Industry</Label>
+	    			
+	    			<!--
+		    		<Picker id="picker" 
+		    			top="0"
+		    			selectionIndicator="true" useSpinner="true">
+			        </Picker>
+			       -->
+			       <Button class="formButton" onClick="openIndustryPicker"> -- Pick an Industry -- </Button>
+				</View>
+				
+				<View class="buttonWrapper" layout="vertical">
+	    			<Label>Billing Street</Label>
+	    			
+		    		<TextField
+		    			height="48"
+		    			top="10"
+		    			width="Ti.UI.FILL"
+						borderStyle= "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+				        hintText="Insert Billing Street">
+				    </TextField>
+				</View>
+			</View>
+	    </ScrollView>
 	</Window>
 </Alloy>
